@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/2.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://vitalets.github.io/x-editable/assets/bootstrap-datetimepicker/css/datetimepicker.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap-editable/css/bootstrap-editable.css"/>
+<link rel="stylesheet" href="http://localhost:8000/RateCalendar.css">
+
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/2.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.js"></script>
+<script src="http://vitalets.github.io/x-editable/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/extensions/editable/bootstrap-table-editable.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap-editable/js/bootstrap-editable.min.js"></script>
+
+</head>
+
+<body class="container">
+
+    <div id="divAlert" class="alert alert-danger" role="alert">
+      <ul id="ulErrors"></ul>
+    </div>
+
+    <table id="tblRateCalendar" data-toggle="table" data-pagination="true" data-page-list="[5, 10, 25, 50, 100, ALL]" data-page-size="5" data-editable="true" data-editable-mode="inline">
+      <thead>
+        <tr>
+          <th data-field="periodStart" data-align="center" data-sortable="true" data-editable="true" data-editable-type="date">Period Start</th>
+          <th data-field="periodEnd" data-align="center" data-sortable="true" data-editable="true" data-editable-type="date">Period End</th>
+          <th data-field="rate" data-align="right" data-sortable="true" data-editable="true" data-editable-type="text">Rate</th>
+          <th data-field="colorCode" data-align="center">Color Code</th>
+          <th data-field="actions" data-align="center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div id="button-group">
+        <button id="btnLoad" class="button btn-primary">Load Sample Data</button>
+        <button id="btnInsert" class="button btn-primary">Insert New</button>
+        <button id="btnSubmit" class="button btn-primary">Submit Data</button>
+    </div>
+</body>
+
+<script src="http://localhost:8000/RateCalendar.js"></script>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+    margin-top: 50px;
+}
+
+#divAlert {
+    display: none;
+}
+
+.color-box {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+}
+
+#button-group {
+    position: relative;
+    margin-top: 20px;
+}
+
+#btnSubmit {
+    position: absolute;
+    right: 0;
+}
